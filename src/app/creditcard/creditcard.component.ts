@@ -31,7 +31,7 @@ export class CreditcardComponent implements OnInit {
 	}	
 
   	onSubmit(): void{
-  		debugger;
+  		
   		var newNumber = this.creditCard.cardNumber;
 		this.creditCard.cardNumber = newNumber.replace(/-/g, '');
 		var msg = this.creditCardService.checkLength(this.creditCard);
@@ -57,7 +57,7 @@ export class CreditcardComponent implements OnInit {
 	}
 
 	captureChanges(ccNum): void{
-		debugger;
+		
 		if(ccNum.length!==undefined && ccNum.length!==0 && ccNum.length!=="0"){
 			ccNum = ccNum.replace(/-/g, '');
 			if(this.creditCardService.checkNumeric(ccNum)){
