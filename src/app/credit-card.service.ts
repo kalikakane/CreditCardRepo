@@ -15,7 +15,7 @@ export class CreditCardService {
   	}
 
   	checkLength(creditCard: CreditCard): string{
-  		debugger;
+  		
   		let newNumber = creditCard.cardNumber;
   		let result = "";
   		switch(creditCard.cardType){
