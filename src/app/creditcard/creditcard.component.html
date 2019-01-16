@@ -1,0 +1,37 @@
+<div class="outerDiv">
+	<form [formGroup]='creditCardForm' (ngSubmit)="onSubmit()">
+	<div class="card">
+		<div class="bank">Bank</div>
+		<div class="chip">
+
+	    </div>
+	    <div class="card-detail">
+	    	<div class="input-group mb-2">
+			  <div class="input-group-prepend">
+			    <span class="input-group-text"><i class="fa fa-credit-card"></i></span>
+			  </div>
+			  <input type="text" 
+			  			numbers
+		    			formControlName="cardNumber" 
+		    			class="form-control form-control-sm" 
+		    			placeholder="Credit Card Number"
+		    			(blur)="checkOnBlur($event)"
+		    			
+		    			/>	    	
+			</div>	    	    	
+	    </div>
+	    <div> 
+	    	<div class="card-type">
+	    		<img [src]="cardTypeImg"/>
+	    	</div>
+	    </div>
+	    
+	</div>
+	<div class="error">
+		<p>{{errorMsg}}</p>
+	</div>
+	<div>
+		<button type="submit" id="submit" [disabled]="!allowSave">Save Card</button>
+	</div>
+	</form>
+</div>
